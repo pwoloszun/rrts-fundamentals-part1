@@ -3,18 +3,7 @@ import { useState, useEffect } from 'react';
 type UseDebounceResult<T> = [T, (nextValue: T) => void];
 
 export default function useDebounce<T>(initialValue: T, delayInMs: number): UseDebounceResult<T> {
-  const [value, setValue] = useState(initialValue);
-  const [debouncedValue, setDebouncedValue] = useState(initialValue);
+  // TODO
 
-  useEffect(() => {
-    const intervalId = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delayInMs);
-
-    return () => {
-      clearTimeout(intervalId);
-    };
-  }, [value, delayInMs]);
-
-  return [debouncedValue, setValue];
+  return [initialValue, (nextValue: T) => { }];
 }

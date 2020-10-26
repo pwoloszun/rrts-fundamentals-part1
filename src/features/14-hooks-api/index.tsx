@@ -17,20 +17,20 @@ export default function HooksApi() {
       <h3>HooksApi</h3>
       <div>
         <h3>useState hooks</h3>
-        {/* <NoHooksCounter /> */}
+        <NoHooksCounter />
         {/* <WithHooksCounter /> */}
         {/* <HistoricCounter /> */}
         {/* <TrackableCounter /> */}
       </div>
       <div>
-        {/* <h3>useEffects hooks</h3> */}
-        {/*<HelloEffectHook/>*/}
+        <h3>useEffects hooks</h3>
+        {/* <HelloEffectHook/> */}
       </div>
       <div>
         {/* <LoadManyThings /> */}
       </div>
       <div>
-        <SearchWithDebounce />
+        {/* <SearchWithDebounce /> */}
       </div>
       <div>
         {/* <SimpleApiTask /> */}

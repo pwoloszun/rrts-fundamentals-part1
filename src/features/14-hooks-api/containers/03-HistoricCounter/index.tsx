@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 import Counter from '../../../../components/Counter';
 
+// TODO: refactor
+// import usePrevious from '../../hooks/usePrevious';
+
 const initialValue = 0;
 
 export default function HistoricCounter() {
