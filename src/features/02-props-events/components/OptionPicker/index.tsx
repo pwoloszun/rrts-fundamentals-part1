@@ -8,27 +8,12 @@ interface OptionPickerProps {
   optionSelect: (option: string) => void;
 }
 
-export default class OptionPicker extends Component<OptionPickerProps> {
+export default class OptionPicker extends Component {
   render() {
-    const { label, options } = this.props;
-    const btns = options.map((option) => {
-      return (
-        <button key={option} onClick={() => this.optionClickHandler(option)}>
-          {option}
-        </button>
-      );
-    });
-
     return (
       <div className={styles.optionPicker}>
-        <span>{label}</span>
-        {btns}
+        <span>TODO_PLACEHOLDER</span>
       </div>
     );
-  }
-
-  private optionClickHandler(option: string) {
-    const { optionSelect } = this.props;
-    optionSelect(option);
   }
 }

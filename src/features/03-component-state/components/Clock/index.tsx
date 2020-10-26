@@ -17,19 +17,13 @@ export default class Clock extends Component<{}, ClockState> {
   render() {
     return (
       <div className={styles.clock}>
-        {
-          this.state.value
-        }
-        <button onClick={this.incrementHandler}>incr</button>
+        TODO_PLACEHOLDER
+        <button>incr</button>
       </div>
     );
   }
 
   private incrementHandler = () => {
-    this.setState((state) => {
-      return {
-        value: state.value + 1
-      };
-    });
+    // TODO
   };
 }

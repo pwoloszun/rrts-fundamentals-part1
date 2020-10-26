@@ -9,48 +9,45 @@ interface CarConfiguratorState {
   selectedDriveWheel: string | null;
 }
 
-export default class CarConfigurator extends Component<{}, CarConfiguratorState> {
+//TODO
+// const initialState = {
+//   selectedEngine: null,
+//   selectedColor: null,
+//   selectedDriveWheel: null,
+// };
+
+export default class CarConfigurator extends Component {
   private engines = ['Petrol', 'Diesel', 'Tesla'];
   private colors = ['Black', 'White', 'Red', 'Yellow'];
   private driveWheels = ['4X', 'Front-Wheel-Drive', 'Rear-Wheel-Drive'];
 
-  constructor(props = {}) {
+  constructor(props: {}) {
     super(props);
-    this.state = {
-      selectedEngine: null,
-      selectedColor: null,
-      selectedDriveWheel: null,
-    };
+    // TODO
   }
 
   render() {
-    const { selectedEngine, selectedColor, selectedDriveWheel } = this.state;
+    // TODO
     return (
       <div className={styles.carConfigurator}>
         <h5>CarConfigurator</h5>
         <div className={styles.chosenConfig}>
           <h5>Current config</h5>
-          <p>Engine: {selectedEngine}</p>
-          <p>Color: {selectedColor}</p>
-          <p>Drive Wheel: {selectedDriveWheel}</p>
+          <p>Engine: TODO_PLACEHOLDER</p>
+          <p>Color: TODO_PLACEHOLDER</p>
+          <p>Drive Wheel: TODO_PLACEHOLDER</p>
         </div>
         <div>
           <OptionPicker
-            label="Choose engine type"
-            options={this.engines}
-            optionSelect={this.selectEngineHandler}
+          // label="Choose engine type"
           />
 
           <OptionPicker
-            label="Select color"
-            options={this.colors}
-            optionSelect={this.selectColorHandler}
+          // label="Select color"
           />
 
           <OptionPicker
-            label="Which one?"
-            options={this.driveWheels}
-            optionSelect={this.selectDriveWheelsHandler}
+          // label="Which one?"
           />
 
         </div>
@@ -58,22 +55,5 @@ export default class CarConfigurator extends Component<{}, CarConfiguratorState>
     );
   }
 
-  private selectEngineHandler = (engine: string) => {
-    this.setState({
-      selectedEngine: engine
-    });
-  };
-
-  private selectColorHandler = (color: string) => {
-    this.setState({
-      selectedColor: color
-    });
-  };
-
-  private selectDriveWheelsHandler = (driveWheel: string) => {
-    this.setState({
-      selectedDriveWheel: driveWheel
-    });
-  };
-
+  // TODO: handle optionSelect event(s)
 }

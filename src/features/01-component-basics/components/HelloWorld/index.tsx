@@ -1,16 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import styles from './styles.module.css';
 
-export default class HelloWorld extends Component {
+export default class HelloWorld extends React.Component {
   render() {
-    const name = `Bob ${Math.random()}`;
     return (
       <div>
-        <h3 className={styles.helloWorld}>
-          Hello {name}
+        <h3>
+          Hello!!!
         </h3>
       </div>
     );
   }
 }
+
+// const element = (
+//   <h1 className="greeting">
+//     Hello, world!
+//   </h1>
+// );
+//
+// const element = React.createElement(
+//   'h1',
+//   {className: 'greeting'},
+//   'Hello, world!'
+// );
+//
+// // simplified
+// const element = {
+//   type: 'h1',
+//   props: {
+//     className: 'greeting',
+//     children: 'Hello, world!'
+//   }
+// };

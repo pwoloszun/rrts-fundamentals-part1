@@ -8,9 +8,9 @@ export default function ComponentState() {
   return (
     <div>
       <h3>Component State</h3>
-      <Randomizer delay={2200} max={50}/>
-      <Clock/>
-      <MyToggleText/>
+      <Randomizer delay={2200} max={50} />
+      <Clock />
+      <MyToggleText />
     </div>
   );
 }

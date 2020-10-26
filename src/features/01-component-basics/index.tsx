@@ -1,15 +1,15 @@
 import React from 'react';
 
 import HelloWorld from './components/HelloWorld';
-import PersonalData from './components/PersonalData';
+// import PersonalData from './components/PersonalData';
 
 export default function ComponentBasics() {
   return (
     <div>
       <h3>Component Basics</h3>
-      <HelloWorld/>
-      <hr/>
-      <PersonalData/>
+      <HelloWorld />
+      <hr />
+      {/* <PersonalData/> */}
     </div>
   );
 }

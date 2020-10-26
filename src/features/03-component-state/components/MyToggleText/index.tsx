@@ -3,26 +3,26 @@ import React, { Component } from 'react';
 import styles from './index.module.css';
 
 interface MyToggleTextState {
-  isVisible: boolean;
+  // TODO
 }
 
 export default class MyToggleText extends Component<{}, MyToggleTextState> {
-  constructor(props = {}) {
+  constructor(props: {}) {
     super(props);
     this.state = {
-      isVisible: true
+      // TODO
     };
   }
 
   render() {
-    const { isVisible } = this.state;
-    const btnCssClasses = ['btn'];
-    let labelText = 'Show';
-    let textContent = null;
-    if (isVisible) {
-      btnCssClasses.push('btn-danger');
-      labelText = 'Hide';
-      textContent = (
+    // TODO css classes: 'btn-danger', 'btn-primary'
+
+    return (
+      <div className={styles.myToggleText}>
+        <button className="btn">
+          Toggle TODO
+        </button>
+        <hr />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus nisi eu sapien finibus elementum. Integer
           porta mi orci, congue malesuada velit varius eu. Fusce quis ante fermentum, tempus nisi nec, luctus neque.
@@ -32,27 +32,8 @@ export default class MyToggleText extends Component<{}, MyToggleTextState> {
           lacinia sodales. In fermentum elementum interdum. Donec sit amet venenatis augue. Aliquam suscipit sagittis
           mauris sed vestibulum. Donec facilisis vestibulum venenatis. Proin venenatis libero vel feugiat ultrices.
         </p>
-      );
-    } else {
-      btnCssClasses.push('btn-primary');
-    }
-
-    return (
-      <div className={styles.myToggleText}>
-        <button onClick={this.toggleVisibilityHandler} className={btnCssClasses.join(' ')}>
-          Toggle {labelText}
-        </button>
-        <hr />
-        {textContent}
       </div>
     );
   }
 
-  private toggleVisibilityHandler = () => {
-    this.setState(({ isVisible }) => {
-      return {
-        isVisible: !isVisible,
-      };
-    });
-  };
 }
