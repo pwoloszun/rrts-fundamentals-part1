@@ -1,0 +1,18 @@
+:local(.styledText) {
+  border: 1px solid #000;
+  padding: 18px;
+  width: 800px;
+  margin: 0 auto;
+}
+
+:local(.styledText .makeBold) {
+  font-weight: bold;
+}
+
+:local(.styledText .addUnderline) {
+  text-decoration: underline;
+}
+
+:local(.styledText .myItalic) {
+  font-style: italic;
+}
