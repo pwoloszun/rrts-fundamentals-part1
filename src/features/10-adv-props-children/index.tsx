@@ -15,7 +15,7 @@ export default function AdvPropsChildren() {
     sex: 'M'
   };
   return (
-    <Tabs defaultActiveKey="Task">
+    <Tabs defaultActiveKey="Task" transition={false}>
       <Tab eventKey="Task" title="Task">
         <AdvPropsTask />
       </Tab>

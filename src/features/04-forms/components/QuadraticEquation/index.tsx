@@ -52,25 +52,22 @@ export default class QuadraticEquation extends Component<{}, QuadraticEquationSt
     );
   }
 
-  aChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  private aChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const a = parseInt(event.target.value);
     this.setState({ a });
-    this.calculateEquation();
   };
 
-  bChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  private bChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const b = parseInt(event.target.value);
     this.setState({ b });
-    this.calculateEquation();
   };
 
-  cChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  private cChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const c = parseInt(event.target.value);
     this.setState({ c });
-    this.calculateEquation();
   };
 
-  calculateEquation() {
+  private calculateEquation() {
     this.setState(function (state) {
       const { a, b, c } = state;
       const delta = (b * b) - (4 * a * c);

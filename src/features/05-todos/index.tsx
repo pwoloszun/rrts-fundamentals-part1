@@ -1,61 +1,44 @@
 import React from 'react';
 
-import todoService from './services/todo-service';
-import TodoList from './components/TodoList';
-import TodoForm from './components/TodoForm';
-import { TodoParams, Todo } from './services/todo.models';
+// import TodoList from './components/TodoList';
+// import TodoForm from './components/TodoForm';
+// import { TODOS_DATA } from './data/todos-data';
+
+import { TodoParams, Todo } from '../../models/todo';
 
 interface TodosState {
   todos: Todo[];
 }
 
-export default class Todos extends React.Component<{}, TodosState> {
-  private unsubscribe: any;
-
-  constructor(props = {}) {
-    super(props);
-    const { todos } = todoService;
-    this.state = {
-      todos
-    };
-    this.unsubscribe = todoService.subscribe(() => {
-      const { todos } = todoService;
-      this.setState({ todos });
-    });
-  }
+export default class TodosPage extends React.Component<{}, TodosState> {
+  // TODO
 
   render() {
-    const { todos } = this.state;
-    const { handleRemoveClick, handleCreateClick } = this;
-
+    // TODO
     return (
       <div style={{ width: '75%', margin: '0 auto' }}>
         <h3>Todos Feature</h3>
         <div>
-          <TodoList
-            todos={todos}
-            onRemoveClick={handleRemoveClick}
-          />
+          {/*<TodoList*/}
+          {/*  todos={TODOS_DATA}*/}
+          {/*  onRemoveClick={this.handleRemoveClick}*/}
+          {/*/>*/}
         </div>
         <hr />
         <div>
-          <TodoForm
-            onCreateClick={handleCreateClick}
-          />
+          {/*<TodoForm*/}
+          {/*  onCreateClick={this.handleCreateClick}*/}
+          {/*/>*/}
         </div>
       </div>
     );
   }
 
-  componentWillUnmount() {
-    this.unsubscribe();
-  }
-
   handleRemoveClick = (todo: Todo) => {
-    todoService.removeTodo(todo);
+    // TODO
   };
 
   handleCreateClick = ({ title, description }: TodoParams) => {
-    todoService.createTodo({ title, description });
+    // TODO
   };
 }

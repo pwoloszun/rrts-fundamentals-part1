@@ -1,23 +1,10 @@
-import createObservableService from '../../../services/create-observable-service';
+import { MyObservable } from '../../../services/create-observable-service';
 
 import { TODOS_DATA } from '../data/todos-data';
-import { TodoParams, Todo } from './todo.models';
+import { TodoParams, Todo } from '../../../models/todo';
 
-const todoService = createObservableService({
-  todos: TODOS_DATA,
+// TODO 1: implement TodoService class
 
-  createTodo({ title, description }: TodoParams) {
-    this.todos.push({ title, description, id: Math.random() });
-    this._notifyListeners();
-  },
-
-  removeTodo(todo: Todo) {
-    const index = this.todos.indexOf(todo);
-    if (index > -1) {
-      this.todos.splice(index, 1);
-    }
-    this._notifyListeners();
-  }
-});
+const todoService = {}; // TODO: create instance of TodoService
 
 export default todoService;

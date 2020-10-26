@@ -1,4 +1,4 @@
-import { Todo } from '../services/todo.models';
+import { TodoParams, Todo } from '../../../models/todo';
 
 export const TODOS_DATA: Todo[] = [
   { id: 100, title: 'Buy milk', description: 'important' },

@@ -7,7 +7,7 @@ export interface ValuesMap {
 }
 
 export interface ErrorsMap {
-  [key: string]: string[];
+  [key: string]: string;
 }
 
 export interface RenderFnParams {
@@ -30,65 +30,49 @@ interface MySimpleFormWrapperProps {
 }
 
 interface MySimpleFormWrapperState {
-  isSubmitting: boolean;
+  isSubmitting: boolean; // default: false
   values: ValuesMap;
 }
 
-export default class MySimpleFormWrapper extends Component<MySimpleFormWrapperProps, MySimpleFormWrapperState> {
+export default class MySimpleFormWrapper extends Component {
+
   constructor(props: MySimpleFormWrapperProps) {
     super(props);
-    const { initialValues } = this.props;
-    this.state = {
-      isSubmitting: false,
-      values: { ...initialValues }
-    };
+
+    // TODO: init state
   }
 
   render() {
-    const { render, validate } = this.props;
-    const { values, isSubmitting } = this.state;
-    const errors = validate(values);
-    const { handleSubmit, handleChange } = this;
+
+    const values = {}; // TODO 1: render form initialized with received initialValues
+    const handleChange = (ev: any) => { }; // TODO 2a: handle change on each form control, store values in state
+    const handleSubmit = (ev: any) => { }; // TODO 2b: handle form submit event: validate & send form values
+    const errors = {}; // TODO 3: impl form controls on change validations, display error messages
+    const isSubmitting = true;
 
     return (
       <div className={styles.mySimpleFormWrapper}>
-        {
-          render({
-            values,
-            errors,
-            isSubmitting,
-            handleSubmit,
-            handleChange
-          })
-        }
+        TODO 1: RENDER_FORM
       </div>
     );
   }
 
-  handleSubmit = (event: React.SyntheticEvent) => {
+  private handleSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault();
+
+    // TODO: exit if invalid
     if (!this.isFormValid()) {
       return;
     }
 
-    const { values } = this.state;
-    this.setState({
-      isSubmitting: true
-    });
-    const { onSubmit } = this.props;
-    const { setSubmitting } = this;
-    onSubmit(values, { setSubmitting });
+    // TODO: trigger onSubmit
   };
 
-  handleChange = (event: React.FormEvent<HTMLInputElement>) => {
-    const { name, value } = event.target as HTMLInputElement;
-    const { values } = this.state;
-    this.setState({
-      values: {
-        ...values,
-        [name]: value
-      }
-    });
+  private handleChange = (event: React.FormEvent<HTMLInputElement>) => {
+    event.preventDefault();
+    // event.target as HTMLInputElement;
+
+    // TODO: handle form control change using 'name' and 'value' properties
   };
 
   setSubmitting = (isSubmitting: boolean) => {
@@ -97,10 +81,8 @@ export default class MySimpleFormWrapper extends Component<MySimpleFormWrapperPr
     });
   };
 
-  isFormValid = () => {
-    const { validate } = this.props;
-    const { values } = this.state;
-    const errors = validate(values);
-    return Object.keys(errors).length <= 0;
+  private isFormValid = (): boolean => {
+    // TODO
+    return false;
   };
 }

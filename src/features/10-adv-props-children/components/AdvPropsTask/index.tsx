@@ -1,3 +1,5 @@
+/* eslint @typescript-eslint/no-unused-vars: 'off' */
+
 import React, { Component } from 'react';
 
 import styles from './styles.module.css';
@@ -16,13 +18,13 @@ export default class AdvPropsTask extends Component {
       let errors: ErrorsMap = {};
       const { name, age } = values;
       if (!name) {
-        errors.name = [`Name is required`];
+        errors.name = `Name is required`;
       }
       if (name && name.length < 3) {
-        errors.name = [`Minimum Name length is 3`];
+        errors.name = `Minimum Name length is 3`;
       }
       if (age < 18) {
-        errors.age = [`Minimum age is 18`];
+        errors.age = `Minimum age is 18`;
       }
       return errors;
     };
@@ -39,7 +41,7 @@ export default class AdvPropsTask extends Component {
               value={values.name}
               type="text"
             />
-            <p>{errors.name[0]}</p>
+            <p>{errors.name}</p>
           </div>
           <div>
             Age:
@@ -49,7 +51,7 @@ export default class AdvPropsTask extends Component {
               value={values.age}
               type="number"
             />
-            <p>{errors.age[0]}</p>
+            <p>{errors.age}</p>
           </div>
           <button type="submit" disabled={isSubmitting}>
             Submit
@@ -69,12 +71,12 @@ export default class AdvPropsTask extends Component {
 
     return (
       <div className={styles.myComp}>
-        <MySimpleFormWrapper
+        {/* <MySimpleFormWrapper
           initialValues={initialValues}
           validate={validateFn}
           render={renderFn}
           onSubmit={onSubmitHandler}
-        />
+        /> */}
       </div>
     );
   }

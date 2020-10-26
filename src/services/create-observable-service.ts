@@ -2,6 +2,21 @@ import { merge, cloneDeep } from 'lodash';
 
 type ListenerFn = () => void;
 
+export class MyObservable {
+  private listeners: ListenerFn[] = [];
+
+  subscribe(listenerFn: ListenerFn) {
+    this.listeners.push(listenerFn);
+    return () => { // unsubscribe function
+      this.listeners = this.listeners.filter((fn) => fn !== listenerFn);
+    };
+  }
+
+  protected notifyListeners() {
+    this.listeners.forEach((listenerFn) => listenerFn());
+  }
+}
+
 const observablePrototype = {
   _listeners: [] as ListenerFn[],
 

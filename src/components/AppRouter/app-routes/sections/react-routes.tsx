@@ -6,13 +6,7 @@ import PropsEvents from '../../../../features/02-props-events';
 import AdvPropsChildren from '../../../../features/10-adv-props-children';
 import ComponentState from '../../../../features/03-component-state';
 import Forms from '../../../../features/04-forms';
-import Todos from '../../../../features/05-todos';
-import Heroes from '../../../../features/06-heroes';
-import Cities from '../../../../features/07-cities';
-import RealEstates from '../../../../features/08-real-estates';
-import ComplexExample from '../../../../features/09-complex-example';
-import HigherOrdrComponentsExamples from '../../../../features/11-hoc';
-import ComponentsTesting from '../../../../features/11-hoc/12-components-testing';
+import TodosPage from '../../../../features/05-todos';
 import HooksApi from '../../../../features/14-hooks-api/index';
 
 const reactRoutes = [
@@ -45,27 +39,7 @@ const reactRoutes = [
   {
     path: "/todos",
     label: 'Todos',
-    main: () => <Todos />
-  },
-  {
-    path: "/hereos",
-    label: 'Heroes',
-    main: () => <Heroes />
-  },
-  {
-    path: "/cities",
-    label: 'Cities',
-    main: () => <Cities />
-  },
-  {
-    path: "/real-estates",
-    label: 'Real estates',
-    main: () => <RealEstates />
-  },
-  {
-    path: "/complex-example",
-    label: 'Complex Exmpl.',
-    main: () => <ComplexExample />
+    main: () => <TodosPage />
   },
 
   {
@@ -74,21 +48,10 @@ const reactRoutes = [
     main: () => <AdvPropsChildren />
   },
   {
-    path: "/hoc",
-    label: 'Higher Order Compoennts(HOC)',
-    main: () => <HigherOrdrComponentsExamples />
-  },
-  {
     path: "/hooks",
     label: 'Hooks API',
     main: () => <HooksApi />
   },
-  {
-    path: "/components-testing",
-    label: 'Components Testing',
-    main: () => <ComponentsTesting />
-  },
-
 
 ];
 
