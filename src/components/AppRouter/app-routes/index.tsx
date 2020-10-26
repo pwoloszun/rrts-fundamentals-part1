@@ -1,7 +1,6 @@
 import React from 'react';
 
 import reactRoutes from './sections/react-routes';
-import formsRoutes from './sections/forms-routes';
 
 export interface RouteInfo {
   path: string;
@@ -16,7 +15,6 @@ export interface AppRoutesMap {
 
 const appRoutes: AppRoutesMap = {
   'React tasks': reactRoutes,
-  'Forms tasks': formsRoutes,
 };
 
 export default appRoutes;
