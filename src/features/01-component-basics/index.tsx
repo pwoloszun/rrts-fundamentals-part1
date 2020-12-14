@@ -9,7 +9,7 @@ export default function ComponentBasics() {
       <h3>Component Basics</h3>
       <HelloWorld />
       <hr />
-      {/* <PersonalData/> */}
+      {/* TODO: create PersonalData component instance  */}
     </div>
   );
 }

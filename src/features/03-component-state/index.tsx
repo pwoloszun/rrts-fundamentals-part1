@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Clock from './components/Clock';
+import MySimpleCounter from './components/MySimpleCounter';
 // import MyToggleText from './components/MyToggleText';
 // import Randomizer from './components/Randomizer';
 
@@ -8,9 +8,13 @@ export default function ComponentState() {
   return (
     <div>
       <h3>Component State</h3>
-      {/* <Randomizer delay={2200} max={50} /> */}
-      <Clock />
+      <MySimpleCounter />
+      <hr />
+
       {/* <MyToggleText /> */}
+      <hr />
+
+      {/* <Randomizer delay={2200} max={50} /> */}
     </div>
   );
 }

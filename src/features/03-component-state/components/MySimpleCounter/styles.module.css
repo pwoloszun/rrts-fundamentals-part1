@@ -1,4 +1,4 @@
-:local(.clock) {
+.mySimpleCounter {
   padding: 12px;
   border: 1px solid #000;
   width: 640px;

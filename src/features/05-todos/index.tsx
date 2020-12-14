@@ -6,12 +6,15 @@ import React from 'react';
 
 import { TodoParams, Todo } from '../../models/todo';
 
-interface TodosState {
+interface Props {
+}
+
+interface State {
   todos: Todo[];
 }
 
-export default class TodosPage extends React.Component<{}, TodosState> {
-  // TODO
+export default class TodosPage extends React.Component<Props, State> {
+  // TODO: init local state
 
   render() {
     // TODO

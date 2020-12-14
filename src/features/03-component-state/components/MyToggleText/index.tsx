@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 
 import styles from './index.module.css';
 
+interface MyToggleTextProps {
+}
+
 interface MyToggleTextState {
   // TODO
 }
 
-export default class MyToggleText extends Component<{}, MyToggleTextState> {
-  constructor(props: {}) {
+export default class MyToggleText extends Component<MyToggleTextProps, MyToggleTextState> {
+
+  constructor(props: MyToggleTextProps) {
     super(props);
-    this.state = {
-      // TODO
-    };
+
+    // TODO: init component LOCAL state
   }
 
   render() {

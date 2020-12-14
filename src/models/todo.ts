@@ -4,4 +4,4 @@ export interface Todo {
   description?: string;
 }
 
-export type TodoParams = Partial<Todo>;
+export type TodoParams = Omit<Todo, 'id'>;

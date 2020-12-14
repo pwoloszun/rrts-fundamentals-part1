@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 
 import styles from './styles.module.css';
 
-interface ClockState {
+interface Props {
+}
+
+interface State {
   value: number;
 }
 
-export default class Clock extends Component<{}, ClockState> {
-  constructor(props = {}) {
+export default class MySimpleCounter extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.state = {
       value: 100
@@ -16,7 +19,7 @@ export default class Clock extends Component<{}, ClockState> {
 
   render() {
     return (
-      <div className={styles.clock}>
+      <div className={styles.mySimpleCounter}>
         TODO_PLACEHOLDER
         <button>incr</button>
       </div>
