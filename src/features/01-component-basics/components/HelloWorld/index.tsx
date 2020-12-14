@@ -35,3 +35,13 @@ export default class HelloWorld extends React.Component {
 //     children: 'Hello, world!'
 //   }
 // };
+
+
+
+// ======
+// List example
+// const people = [
+//   { id: 100, name: 'bob' },
+//   { id: 200, name: 'ed' },
+//   { id: 300, name: 'kate' },
+// ];
