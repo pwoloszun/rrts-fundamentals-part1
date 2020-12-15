@@ -8,22 +8,21 @@ import Counter from '../../../../components/Counter';
 const initialValue = 0;
 
 export default function HistoricCounter() {
-  const [previousValue, setPreviousValue] = useState<number | null>(null);
-  const [currentValue, setCurrentValue] = useState(initialValue);
+  // TODO introduce state: previousValue
+  // TODO introduce state: currentValue
+  const currentValue = -997; // TODO
 
   const incrementHandler = () => {
-    setPreviousValue(currentValue);
-    setCurrentValue(currentValue + 10);
+    // TODO
   };
   const decrementHandler = () => {
-    setPreviousValue(currentValue);
-    setCurrentValue(currentValue - 10);
+    // TODO
   };
 
   return (
     <div>
       <h3>HistoricCounter</h3>
-      <h5>Previous Value: {previousValue} </h5>
+      <h5>Previous Value: PREVIOUS_PLACEHOLDER </h5>
       <div>
         <Counter value={currentValue}
           onIncrement={incrementHandler}
