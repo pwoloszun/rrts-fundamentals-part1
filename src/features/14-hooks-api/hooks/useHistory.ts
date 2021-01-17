@@ -16,12 +16,19 @@ export default function useHistory<T>(initialValue: T): UseHistoryResult<T> {
   // TODO
 
   return {
+    // part 1
     value: initialValue,
     setValue: (nextValue: T) => { },
     past: [],
-    future: [],
+
+    // part 2
     undo: () => { },
+
+    // part 3
+    future: [],
     redo: () => { },
+
+    // part 4
     canUndo: false,
     canRedo: false,
   };

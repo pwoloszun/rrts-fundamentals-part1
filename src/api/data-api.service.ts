@@ -4,6 +4,8 @@ import { merge } from 'lodash';
 import { delayedValue } from '../utils/randoms';
 import { normalizeEntities, NormalizedEntities } from '../utils/normalize-entities';
 
+import BASE_URL from './base-url';
+
 const defaultDelaysMap = {
   create: 1800,
   read: 1800,
@@ -15,9 +17,6 @@ const defaultNormilizeOptions = {
   normalize: false,
   entityKey: null,
 };
-
-const port = 4100;
-const baseUrl = `http://localhost:${port}`;
 
 export interface DataEntity {
   id: number;
@@ -74,7 +73,7 @@ export default class DataApiService<T extends DataEntity> {
   }
 
   _getUrl(): string {
-    return `${baseUrl}${this._url}`;
+    return `${BASE_URL}${this._url}`;
   }
 
   _getSingleUrl(entity: DataEntity) {
