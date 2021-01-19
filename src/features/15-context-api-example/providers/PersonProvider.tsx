@@ -8,7 +8,7 @@ interface Props {
   value: Person;
 }
 
-export default function TodosProvider(props: React.PropsWithChildren<Props>) {
+export default function PersonProvider(props: React.PropsWithChildren<Props>) {
   const personService = usePerson(props.value);
 
   return (
