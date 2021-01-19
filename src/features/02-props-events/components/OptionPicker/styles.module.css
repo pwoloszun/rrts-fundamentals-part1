@@ -1,12 +1,16 @@
-:local(.optionPicker) {
+.optionPicker {
   padding: 16px;
   border: 1px solid #000;
   margin: 8px auto;
   background-color: aliceblue;
 }
 
-:local(.optionPicker button) {
+.optionPicker button {
   background-color: darkgreen;
   color: #fff;
   padding: 8px;
+}
+
+.highlightedBtn {
+  background-color: #f00;
 }

@@ -8,6 +8,7 @@ import ComponentState from '../../../../features/03-component-state';
 import Forms from '../../../../features/04-forms';
 import TodosPage from '../../../../features/05-todos';
 import HooksApi from '../../../../features/14-hooks-api/index';
+import ContextApiExample from '../../../../features/15-context-api-example/index';
 
 const reactRoutes = [
   {
@@ -51,6 +52,11 @@ const reactRoutes = [
     path: "/hooks",
     label: 'Hooks API',
     main: () => <HooksApi />
+  },
+  {
+    path: "/context-api-example",
+    label: 'Context API',
+    main: () => <ContextApiExample />
   },
 
 ];
