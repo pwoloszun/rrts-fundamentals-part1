@@ -5,28 +5,15 @@ import fetchRealEstates, { RealEstate } from 'src/api/fetch-real-estates';
 import EntitiesSimpleList from '../../components/EntitiesSimpleList';
 
 export default function MyDashboard() {
-  const [realEstates, setRealEstates] = useState<RealEstate[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<Error | null>(null);
+  // TODO 1
+  const realEstates: RealEstate[] = [];
+  const isLoading = true;;
+  const error = null;
 
-  useEffect(() => {
-    const requestPromise = fetchRealEstates();
+  // TODO 1: impl fetching real estates
 
-    setIsLoading(true);
-    requestPromise
-      .then((realEstates) => {
-        // throw new Error('oh my!');
-        setRealEstates(realEstates);
-      })
-      .catch((error) => {
-        setError(error);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  }, []);
 
-  // TODO
+  // TODO 2: refactor
   // const [
   //   realEstates,
   //   isRealEstatesLoading,
