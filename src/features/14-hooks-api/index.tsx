@@ -10,6 +10,7 @@ import HistoricCounter from './containers/03-HistoricCounter';
 import TrackableCounter from './containers/TrackableCounter';
 import HelloEffectHook from './containers/04-HelloEffectHook';
 import SimpleApiTask from './containers/SimpleApiTask';
+import MyDashboard from './containers/MyDashboard/index';
 
 export default function HooksApi() {
   return (
@@ -24,10 +25,11 @@ export default function HooksApi() {
       </div>
       <div>
         <h3>useEffects hooks</h3>
-        {/* <HelloEffectHook/> */}
+        {/* <HelloEffectHook /> */}
       </div>
       <div>
         {/* <LoadManyThings /> */}
+        {/* <MyDashboard /> */}
       </div>
       <div>
         {/* <SearchWithDebounce /> */}

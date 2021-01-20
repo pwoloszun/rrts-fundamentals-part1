@@ -5,15 +5,10 @@ export default function HelloEffectHook() {
   const [updatedAt, setUpdatedAtGreeting] = useState(0);
 
   useEffect(() => {
-    setTimeout(() => {
-      if (updatedAt === 0) {
-        return;
-      }
-      const nextValue = `Hello Bob ${Math.random()}`;
-      console.log('setGreeting', nextValue);
-      setGreeting(nextValue);
-    }, 2000);
-  }, [updatedAt]);
+    // TODO 1: async generate next greeting: `Hello Bob ${Math.random()}`
+
+    // TODO 2: cleanup
+  }); // TODO: effect dependencies
 
   const btnClickHandler = () => setUpdatedAtGreeting(Date.now());
 

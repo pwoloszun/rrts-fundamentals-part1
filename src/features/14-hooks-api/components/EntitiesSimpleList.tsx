@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface Props {
-  entites: any[];
+  entites: any[] | null;
   isLoading: boolean;
   error: Error | null;
   renderValue: string;
@@ -32,5 +32,10 @@ export default function EntitiesSimpleList(props: Props) {
     );
   }
 
-  return content;
+  return (
+    <div>
+      <h3>List</h3>
+      {content}
+    </div>
+  );
 }
