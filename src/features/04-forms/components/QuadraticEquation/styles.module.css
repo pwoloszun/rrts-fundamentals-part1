@@ -1,4 +1,4 @@
-:local(.equation) {
+.equation {
   width: 800px;
   margin: 0 auto;
   border: 3px solid #000;
@@ -6,7 +6,7 @@
   padding: 12px;
 }
 
-:local(.equation input) {
+.equation input {
   border: 1px solid #000;
   background-color: #fff;
   padding: 2px 4px;
